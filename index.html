@@ -738,23 +738,17 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Smooth scroll helper
-    function scrollToSection(id) {
+      function scrollToSection(id) {
       const el = document.getElementById(id);
       if (!el) return;
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    // Start session:
-    // Option A: send users directly to your UseAI tool (which already has a paywall)
-    // Option B: send users to Stripe Checkout first, then redirect to UseAI after payment
-    <script>
-  function startSession() {
-    // Replace this with your actual Stripe Checkout link
-    const stripeCheckoutUrl = https://buy.stripe.com/bJeeV5amZfwv19s9Xe7g400
-    // Send user to Stripe to enter credit/debit card info
-    window.location.href = stripeCheckoutUrl;
-  }
-</script>
-  
+    /* ⭐ THIS IS THE UPDATED STRIPE PAYMENT REDIRECT ⭐ */
+    function startSession() {
+      const stripeCheckoutUrl = "https://buy.stripe.com/bJeeV5amZfwv19s9Xe7g400";
+      window.location.href = stripeCheckoutUrl;
+    }
+  </script>
 </body>
 </html>
