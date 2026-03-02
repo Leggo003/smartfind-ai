@@ -747,14 +747,15 @@
     // Start session:
     // Option A: send users directly to your UseAI tool (which already has a paywall)
     // Option B: send users to Stripe Checkout first, then redirect to UseAI after payment
-    function startSession() {
-  const stripeCheckoutUrl = "https://buy.stripe.com/YOUR_REAL_LINK_HERE";
-  window.location.href = stripeCheckoutUrl;
-}
+ <script>
+  function startSession() {
+    // Replace this with your actual Stripe Checkout link
+    const stripeCheckoutUrl = "https://buy.stripe.com/YOUR_REAL_LINK_HERE";
 
-      // If you prefer Stripe first, comment the line above and uncomment below:
-      // window.location.href = stripeCheckoutUrl;
-    }
-  </script>
+    // Send user to Stripe to enter credit/debit card info
+    window.location.href = stripeCheckoutUrl;
+  }
+</script>
+  
 </body>
 </html>
