@@ -424,7 +424,15 @@
       `;
       chatBox.scrollTop = chatBox.scrollHeight;
 
-      const apiKey = "const apiKey = "SmartFind-AI"; // ← replace with your real OpenAI API key
+      const apiKey = "const apiKey = import OpenAI from "openai";
+const client = new OpenAI();
+
+const response = await client.responses.create({
+  model: "gpt-5.2",
+  input: "Write a short bedtime story about a unicorn.",
+});
+
+console.log(response.output_text);
 
       const systemPrompt = `
 You are SmartFind AI. Your job is to return 3–7 curated options with:
